@@ -1,37 +1,30 @@
 import styled from "styled-components";
-import { motion } from 'framer-motion';
-
-import {
-  HeadingH3,
-  Paragraph,
-  flexRowCenter,
-  flexColumnCenter,
-  PrimaryButton,
-} from "../cssHelper";
+import { motion } from "framer-motion";
 import { theme } from "../Theme";
 
 export const Section = styled.section`
-    width: 100vw;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    grid-template-column: 1fr 1fr;
-    max-width:100%;
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  max-width: 100%;
   background-color: #5928e5;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column;
     align-items: center;
     padding-bottom: 50px;
-  } ;
+  }
 `;
 
 export const Container = styled(motion.div)`
   height: 100%;
   width: 90%;
-  max-width:1600px;
+  max-width: 1600px;
   display: flex;
   align-items: center;
+  justify-content: center; // Center content horizontally
   padding-top: 5rem;
   padding-bottom: 4rem;
 
@@ -40,215 +33,158 @@ export const Container = styled(motion.div)`
     width: 90%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-  } ;
+  }
 `;
+
 export const Hero = styled(motion.div)`
   margin-top: 1.9rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center all child elements horizontally
+  text-align: center; // Center text for all child elements
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding-bottom:0;
-    margin-bottom:70px;
-  } ;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+  }
 `;
+
 export const Heading = styled(motion.h1)`
-  ${HeadingH3};
-  width: ${({ theme }) => theme.width[10]};
-  height: auto;
-  word-wrap: break-word;
-  word-spacing:1px;
-  color:#FFF2F2;
   font-family: "Grifter-bold", sans-serif;
-  font-weight:800;
-  font-size:3rem;
-  line-height:80px;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 80px;
   letter-spacing: 1.2px;
-  padding-right: 140px;
+  color: #fff2f2;
   margin: 1rem 0;
+  text-align: center; // Ensure text is centered
+
   @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
-    font-size:2.5rem;
-  } 
+    font-size: 2.5rem;
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size:3rem;
+    font-size: 3rem;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size:2.5rem;
+    font-size: 2.5rem;
     margin: 5px 0;
-    padding-right: 0px;
-  }   
+  }
 `;
+
 export const HeroDescription = styled(motion.p)`
-  ${Paragraph};
-  color:#FFF2F2;
-  opacity:0.9;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight:500;
-  margin-top: 25px;
+  font-weight: 500;
   font-size: 20px;
-  line-height:45px;
-  padding: 5px;
-  letter-spacing: 0.5px;
+  line-height: 45px;
+  color: #fff2f2;
   opacity: 0.8;
-  width: 80%;
+  margin-top: 25px;
+  text-align: center; // Ensure text is centered
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     margin-top: 8px;
     width: 85%;
-    line-height:20px;
-  } ;
-`;
-export const HeroButtons = styled.div`
-  ${flexRowCenter};
-  
-  justify-content: space-between;
-  margin-top: 40px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    margin-top:28px;
+    line-height: 20px;
   }
 `;
 
 export const HeaderButton = styled.button`
-  ${PrimaryButton}
-  background-color:#FEC9C1;
-  color:#0D0A19;
+  background-color: #fec9c1;
+  color: #0d0a19;
+  padding: 12px 40px; // Increased horizontal padding for expansion
+  border: none;
+  border-radius: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
   margin-top: 40px;
+  transition: background-color 0.3s ease; // Smooth hover effect
+
+  &:hover {
+    background-color: #ffb3a8;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 12px 30px; // Slightly smaller padding on mobile
+  }
 `;
 
 export const StarDiv = styled.div`
-  border-top:0.1px solid #ada9a9;
-  width:60%;
-  margin-top:110px;
-  padding-top:40px;
-  padding-bottom:15px;
-  display:flex;
-  gap:10px; 
+  border-top: 0.1px solid #ada9a9;
+  width: 60%;
+  margin-top: 80px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center; // Center the stars horizontally
+  gap: 10px;
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    margin-top:30px;
+    margin-top: 30px;
   }
-`
+`;
 
 export const StarImg = styled.img`
-  width:1.5rem;
+  width: 1.5rem;
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    width:1.2rem;
+    width: 1.2rem;
   }
-`
+`;
 
 export const ShowText = styled.p`
   color: #d9d9d9;
-  font-size:18px;
-`
+  font-size: 18px;
+  margin-top: 20px;
+`;
 
 export const PeopleFaces = styled.img`
-  margin-top:15px;
+  margin-top: 15px;
   width: 10rem;
-  height:60px;
+  height: 60px;
   object-fit: contain;
-  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
-    
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    
-  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.smallestMobile}) {
     width: 9rem;
   }
-`
+`;
 
 export const ClientSection = styled.section`
-    width: 100vw;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    grid-template-column: 1fr;
-    max-width:100%;
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  max-width: 100%;
   background-color: #5928e5;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column;
     align-items: center;
-  } ;
+  }
 `;
 
 export const ClientsContainer = styled.div`
-  width:90%;
+  width: 90%;
   max-width: 1600px;
   overflow: hidden;
   padding: 30px 0px;
-  background: ${theme.colors.primaryBackground}
-`
+  background: ${theme.colors.primaryBackground};
+`;
 
 export const ClientLogoDiv = styled.div`
   display: grid;
   place-items: center;
-  border:0px;
-  cursor:grab;
+  border: 0px;
+  cursor: grab;
   height: 70px;
-  padding:10px 10px;
+  padding: 10px 10px;
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     height: 60px;
-  } ;
-`
-
-export const ClientLogo = styled.img`
-
-`
-
-export const ImageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  max-width:100%;
-  justify-content: space-between;
-  margin-top: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    height: 50vh;
-    margin-top: 0.2rem;
   }
 `;
-export const Image = styled.img`
-  width: ${({ theme }) => theme.width[2]};
-  height: auto;
-  min-height: 84%;
-  max-height: 85%;
-  border-radius: 10px;
-  object-fit: cover;
-  object-position: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    display: none;
-  } ;
-`;
-export const ImageBelow = styled.img`
-  width: ${({ theme }) => theme.width[2]};
-  margin-top: ${({ theme }) => theme.space[13]};
-  height: auto;
-  min-height: 84%;
-  max-height: 85%;
-  border-radius: 10px;
-  object-fit: cover;
-  object-position: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    display: none;
-  }
-  /* @media(max-width:${({ theme }) => theme.breakpoints.mobile}){
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin:0 auto;
-    width:100%;
-    height:100%;
-}; */
-`;
-export const HeaderMobileImage = styled.div`
-  display: none;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    display: block;
-    background-image: url("https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    height: 80%;
-    width: 90vw;
-    max-width:100%;
-  } ;
-`;
+
+export const ClientLogo = styled.img``;
