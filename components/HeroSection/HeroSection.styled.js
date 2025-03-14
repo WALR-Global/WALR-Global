@@ -9,7 +9,7 @@ export const Section = styled.section`
   place-items: center;
   grid-template-columns: 1fr;
   max-width: 100%;
-  background-color: #5928e5;
+  background-color: #1841ff;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column;
@@ -158,7 +158,7 @@ export const ClientSection = styled.section`
   place-items: center;
   grid-template-columns: 1fr;
   max-width: 100%;
-  background-color: #5928e5;
+  background-color: #1841ff;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column;
