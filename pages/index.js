@@ -45,7 +45,7 @@ export default function Home() {
         />
         <meta property="twitter:image" content="/images/banner.jpeg"></meta>
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.jpg"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.jpg"/>
 <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.jpg"/>
 <link rel="manifest" href="/site.webmanifest"/>
