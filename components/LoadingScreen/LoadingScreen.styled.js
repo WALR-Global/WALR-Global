@@ -4,7 +4,7 @@ export const Screen = styled.div`
   position:relative;
   width: 100%;
   height: 100svh;
-  background: #5928E5;
+  background: #1841ff;
   display: flex;
   justify-content: center;
   align-items: center;
