@@ -11,7 +11,7 @@ const LoadingScreen = () => {
   return (
    <Screen>
     <Container>
-        <Title>Intelpik</Title>
+        <Title>WALR Global</Title>
         <Tagline>Crafting the future</Tagline>
     </Container>
    </Screen>
